@@ -1,0 +1,19 @@
+Weeks 1-4 Report: Building the Easy SignIn Tablet Application
+
+Overview:
+During my first four weeks at a healthcare software company, I built an application named Easy SignIn, which allows providers, patients, guardians, and staff to sign different forms using a tablet. I learned a lot about the healthcare industry and how technology can be used to improve patient care and outcomes.
+
+Week 1:
+During the first week, I worked with my team to define the requirements for the Easy SignIn application. We identified the different types of forms that needed to be signed, the user roles, and the specific features that would be required. I also familiarized myself with the company's software development processes and standards.
+
+Week 2:
+In the second week, I began building the Easy SignIn application. I created the user interface (UI) design, which was simple and easy to use. I also implemented the basic functionality for signing forms, including the ability to save and retrieve form data. I used Flutter and Dart programming language for developing the application.
+
+Week 3:
+During the third week, I continued to work on the application, adding more features and functionality. I implemented a login system that allowed users to create and manage their accounts. I also added the ability for users to select the type of form they wanted to sign, and the application would load the appropriate form for them.
+
+Week 4:
+In the fourth and final week, I completed the Easy SignIn application. I added additional features, such as the ability to print and email signed forms. I also implemented security measures to ensure that sensitive patient data was protected. Finally, I tested the application thoroughly to ensure that it was functioning correctly and met all the requirements.
+
+Next Steps:
+Moving forward, I plan to continue working on healthcare software projects and learning about the industry. I will seek feedback from my team members and mentors to improve my skills and contribute to the company's goals. I also plan to stay updated with the latest trends and technologies in healthcare and software development.
