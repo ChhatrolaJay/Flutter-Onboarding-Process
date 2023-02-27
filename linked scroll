@@ -1,0 +1,222 @@
+import 'package:flutter/material.dart';
+import 'package:linked_scroll_controller/linked_scroll_controller.dart';
+
+class ScrollDemo extends StatefulWidget {
+  @override
+  _ScrollDemoState createState() => _ScrollDemoState();
+}
+
+class _ScrollDemoState extends State<ScrollDemo> {
+  final List<String> colEntries = "123456".split('');
+  final List<String> rowEntries = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday'
+  ];
+  // Iterable<int>.generate(15).map((e) => e.toString()).toList();
+
+  late LinkedScrollControllerGroup _horizontalControllersGroup;
+  late ScrollController _horizontalController1;
+  late ScrollController _horizontalController2;
+
+  late LinkedScrollControllerGroup _verticalControllersGroup;
+  late ScrollController _verticalController1;
+  late ScrollController _verticalController2;
+
+  @override
+  void initState() {
+    super.initState();
+    _horizontalControllersGroup = LinkedScrollControllerGroup();
+    _horizontalController1 = _horizontalControllersGroup.addAndGet();
+    _horizontalController2 = _horizontalControllersGroup.addAndGet();
+    _verticalControllersGroup = LinkedScrollControllerGroup();
+    _verticalController1 = _verticalControllersGroup.addAndGet();
+    _verticalController2 = _verticalControllersGroup.addAndGet();
+  }
+
+  @override
+  void dispose() {
+    _horizontalController1.dispose();
+    _horizontalController2.dispose();
+    _verticalController1.dispose();
+    _verticalController2.dispose();
+    super.dispose();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('sync scroll demo'),
+      ),
+      body: SafeArea(
+        child: Padding(
+          padding: const EdgeInsets.all(20),
+          child: Column(
+            children: <Widget>[
+              Row(
+                children: <Widget>[
+                  Container(
+                    width: 100,
+                    height: 75,
+                    color: Colors.grey[200],
+                  ),
+                  const SizedBox(width: 10),
+                  Container(
+                    height: 100,
+                    width: 400,
+                    color: Colors.blue[100],
+                    child: SingleChildScrollView(
+                      scrollDirection: Axis.horizontal,
+                      controller: _horizontalController2,
+                      child: HeaderContainer(rowEntries: rowEntries),
+                    ),
+                  )
+                ],
+              ),
+              const SizedBox(height: 10),
+              Row(
+                children: <Widget>[
+                  Container(
+                    width: 80,
+                    height: 400,
+                    color: Colors.blue[100],
+                    child: SingleChildScrollView(
+                      controller: _verticalController2,
+                      child: ColumnContainer(
+                        colEntries: colEntries,
+                      ),
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  SizedBox(
+                    width: 400,
+                    height: 400,
+                    child: SingleChildScrollView(
+                      controller: _verticalController1,
+                      child: SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        controller: _horizontalController1,
+                        child: BodyContainer(
+                          rowEntries: rowEntries,
+                          colEntries: colEntries,
+                        ),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+class ColumnContainer extends StatelessWidget {
+  final List<String> colEntries;
+  const ColumnContainer({
+    Key? key,
+    required this.colEntries,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    int numberOfRows = colEntries.length;
+    return Column(
+      children: List.generate(
+        numberOfRows,
+        (i) {
+          return Container(
+            height: 75,
+            width: 80,
+            decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+            child: Center(child: Text(colEntries[i])),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class HeaderContainer extends StatelessWidget {
+  final List<String> rowEntries;
+  const HeaderContainer({
+    Key? key,
+    required this.rowEntries,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    int _numberOfColumns = rowEntries.length;
+    return Row(
+      children: List.generate(
+        _numberOfColumns,
+        (i) {
+          return Container(
+            height: 75,
+            width: 80,
+            decoration: BoxDecoration(border: Border.all(color: Colors.white)),
+            child: Center(child: Text(rowEntries[i])),
+          );
+        },
+      ),
+    );
+  }
+}
+
+class BodyContainer extends StatelessWidget {
+  final List<String> colEntries;
+  final List<String> rowEntries;
+  BodyContainer({
+    Key? key,
+    required this.colEntries,
+    required this.rowEntries,
+  }) : super(key: key);
+
+  List<List<String>> a = [
+    ['Math', 'Sci', 'S.S', 'P.T.', 'Geo', 'Yoga'],
+    ['Math', 'Sci', 'S.S', 'P.T.', 'Geo', 'Yoga'],
+    ['Math', 'Sci', 'S.S', 'P.T.', 'Geo', 'Yoga'],
+    ['Math', 'Sci', 'S.S', 'P.T.', 'Geo', 'Yoga'],
+    ['Math', 'Sci', 'S.S', 'P.T.', 'Geo', 'Yoga'],
+    ['Math', 'Sci', 'S.S', 'P.T.', 'Geo', 'Yoga'],
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    int _numberOfColumns = rowEntries.length;
+    int _numberOfLines = colEntries.length;
+    return Column(
+      children: List.generate(_numberOfLines, (y) {
+        return Row(
+          children: List.generate(_numberOfColumns, (x) {
+            return TableCell(item: "${a[y][x]}");
+          }),
+        );
+      }),
+    );
+  }
+}
+
+class TableCell extends StatelessWidget {
+  final String item;
+  const TableCell({
+    Key? key,
+    required this.item,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: 75,
+      width: 80,
+      decoration: BoxDecoration(border: Border.all(color: Colors.grey)),
+      child: Center(child: Text(item)),
+    );
+  }
+}
