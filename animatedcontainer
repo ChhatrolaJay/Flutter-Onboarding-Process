@@ -1,0 +1,68 @@
+import 'package:flutter/material.dart';
+
+class AnimatedContainerSwitcher extends StatefulWidget {
+  @override
+  _AnimatedContainerSwitcherState createState() =>
+      _AnimatedContainerSwitcherState();
+}
+
+class _AnimatedContainerSwitcherState extends State<AnimatedContainerSwitcher> {
+  bool _isFirstContainerVisible = true;
+
+  void _toggleContainerVisibility() {
+    setState(() {
+      _isFirstContainerVisible = !_isFirstContainerVisible;
+    });
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        AnimatedSwitcher(
+          duration: Duration(milliseconds: 500),
+          transitionBuilder: (child, animation) {
+            final offsetAnimation =
+            Tween<Offset>(begin: Offset(1.0, 0.0), end: Offset(0.0, 0.0))
+                .animate(animation);
+            return SlideTransition(
+              position: offsetAnimation,
+              child: child,
+            );
+          },
+          child: _isFirstContainerVisible
+              ? Container(
+            key: ValueKey("FirstContainer"),
+            height: 200,
+            width: 200,
+            color: Colors.blue,
+            child: Center(
+              child: Text(
+                "First Container",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          )
+              : Container(
+            key: ValueKey("SecondContainer"),
+            height: 200,
+            width: 200,
+            color: Colors.red,
+            child: Center(
+              child: Text(
+                "Second Container",
+                style: TextStyle(color: Colors.white),
+              ),
+            ),
+          ),
+        ),
+        SizedBox(height: 20),
+        ElevatedButton(
+          onPressed: _toggleContainerVisibility,
+          child: Text("Toggle Container"),
+        ),
+      ],
+    );
+  }
+}
