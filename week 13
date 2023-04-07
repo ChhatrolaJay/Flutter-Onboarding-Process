@@ -1,0 +1,96 @@
+Weekly Report: Week 13 (Flutter Developer)
+
+Introduction
+This report summarizes the activities I carried out during the week 13 of my employment as a Flutter Developer. The primary focus of my work was to build an application for tablet named IMSEasy Sign application, and I also performed different types of testing in flutter to my application.
+
+IMSEasy Sign Application
+During the week, I worked on developing the IMSEasy Sign application. The application is designed to allow users to create digital signatures and sign documents electronically. I used Flutter to develop the application, and I worked with the team to ensure that the design and functionality met the requirements of the client.
+
+Testing Activities
+In addition to building the IMSEasy Sign application, I also performed different types of testing to ensure the quality of the application. Some of the testing activities I performed include:
+
+    Unit Testing: I wrote unit tests to test individual units of code to ensure that they work correctly.
+
+    Integration Testing: I carried out integration testing to test how different components of the application work together.
+
+    User Acceptance Testing: I also performed user acceptance testing to ensure that the application meets the requirements of the client and is easy to use.
+
+Conclusion
+Overall, during the week 13, I made significant progress in developing the IMSEasy Sign application and ensured that it met the requirements of the client. I also performed different types of testing to ensure that the application is of high quality and meets the expectations of the users.
+
+
+
+
+
+
+Weekly Report: Week 14 (Flutter Developer)
+
+Introduction
+This report summarizes the activities I carried out during the week 14 of my employment as a Flutter Developer. The primary focus of my work was to deploy the IMSEasy Sign application for the sales team and ensure that it is accessible through ims-easy-sign.com. I also tested the app for different device responsiveness.
+
+IMSEasy Sign Application Deployment
+During the week, I worked on deploying the IMSEasy Sign application for the sales team. The application is now accessible through ims-easy-sign.com, and it can be used by doctors to check how many patients checked in the clinic for different procedures. The app can also be used to take signatures for the forms that are required to be signed by the patient, provider, staff, or guardian. I worked with the team to ensure that the deployment process was seamless, and the application was available to the sales team as scheduled.
+
+Testing Activities
+In addition to deploying the application, I also tested the app for different device responsiveness. I tested the app on various devices, including tablets and smartphones, to ensure that it works correctly on different screen sizes. I made necessary changes to the UI to make the app look good and work correctly on different devices.
+
+Conclusion
+Overall, during the week 14, I successfully deployed the IMSEasy Sign application for the sales team and ensured that it is accessible through ims-easy-sign.com. I also tested the app for different device responsiveness and made necessary changes to the UI to make it look good and work correctly on different devices. I look forward to continuing to work on the application and ensuring that it meets the expectations of the users.
+
+
+
+
+Weekly Report: Week 15 (Flutter Developer)
+
+Introduction
+This report summarizes the activities I carried out during the week 15 of my employment as a Flutter Developer. The primary focus of my work was to build a new project related to an events application that manages all the past and upcoming events that happen in the company. I used Flutter framework and Firebase as the backend and storage provider for the application.
+
+Building the Project
+During the week, I started building the project for the events application. I began by creating the basic structure of the application and implementing the login and signup modules using Firebase Authentication. I also designed the UI for the login and signup screens and ensured that they were responsive on different devices.
+
+Session and Speaker Modules
+I also worked on implementing the session and speaker modules of the application. I created the necessary data models and designed the UI for the screens. I integrated Firebase Firestore to store and retrieve the session and speaker data.
+
+Conclusion
+Overall, during the week 15, I made significant progress on the events application project. I completed the login and signup modules and implemented the session and speaker modules of the application. I look forward to continuing to work on the project and ensuring that it meets the expectations of the users.
+
+Weekly Report: Week 16 (Flutter Developer)
+
+Introduction
+This report summarizes the activities I carried out during the week 16 of my employment as a Flutter Developer. The primary focus of my work was to build a new project related to an events application that manages all the past and upcoming events that happen in the company. I used Flutter framework and Firebase as the backend and storage provider for the application.
+
+Feeds and Sponsors Modules
+During the week, I worked on implementing the feeds and sponsors modules of the application. I created the necessary data models and designed the UI for the screens. I integrated Firebase Firestore to store and retrieve the feed and sponsor data.
+
+Taking Important Notes Module
+I also worked on the taking important notes module of the application. I created the necessary data models and designed the UI for the screen. I integrated Firebase Firestore to store and retrieve the notes data.
+
+Conclusion
+Overall, during the week 16, I continued to make progress on the events application project. I implemented the feeds and sponsors modules of the application and worked on the taking important notes module. I look forward to continuing to work on the project and ensuring that it meets the expectations of the users.
+
+Weekly Report: Week 17 (Flutter Developer)
+
+Introduction
+This report summarizes the activities I carried out during the week 17 of my employment as a Flutter Developer. The primary focus of my work was to build a new project related to an events application that manages all the past and upcoming events that happen in the company. I used Flutter framework and Firebase as the backend and storage provider for the application.
+
+Different Tracks of the Session Module
+During the week, I worked on implementing the different tracks of the session module of the application. I created the necessary data models and designed the UI for the screens. I integrated Firebase Firestore to store and retrieve the data related to different tracks.
+
+Value Added Services Module
+I also worked on the value added services module of the application. I created the necessary data models and designed the UI for the screen. I integrated Firebase Firestore to store and retrieve the data related to value added services.
+
+Conclusion
+Overall, during the week 17, I continued to make progress on the events application project. I implemented the different tracks of the session module and worked on the value added services module. I look forward to continuing to work on the project and ensuring that it meets the expectations of the users.
+
+
+
+Week 18
+
+
+During this week, I continued to work on the events application project. I focused on adding new features such as event schedule, event maps, and event reminders. I implemented the event schedule feature using a calendar widget and integrated it with the Firebase database to fetch and display the events' schedule for each day. The event maps feature was implemented using the Google Maps API, allowing users to view the location of each event and get directions to the venue. Lastly, I implemented event reminders using local notifications, allowing users to set reminders for upcoming events.
+
+I also worked on improving the overall UI/UX of the application by implementing better animations, transitions, and UI elements. This included refining the color scheme, font choices, and overall layout of the app to make it more user-friendly.
+
+In addition to the new features and UI improvements, I also spent time testing the application to ensure it was functioning correctly and was responsive across different devices.
+
+Overall, it was a productive week, and I'm excited to continue building out this project in the coming weeks.
